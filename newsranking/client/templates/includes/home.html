@@ -1,0 +1,20 @@
+<template name="home">
+	<div class="container">
+		<h2 class="text-center">News Ranking Site</h2>
+		<div class="row">
+			<p class="lead"> Предложить новость </p>
+				<div class="col-md-9">
+					<input type="text" class="form-control" id="add-news"/> 
+				</div>
+				<div class="col-md-3">
+					<button type="button" id="send-news" class="btn btn-primary">Отправить</button>
+				</div>
+		</div>
+		<h3>Новости</h3>
+		<div class="row">
+			{{#each links}}
+				{{> link}}
+			{{/each}}
+		</div>
+	</div>
+</template>
