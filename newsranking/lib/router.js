@@ -10,3 +10,15 @@ Router.configure({
 Router.route('/', {
 	name: 'home'
 });
+
+Router.route('/suggest', {
+	name: 'suggest'
+});
+
+Router.route('/about', {
+	name: 'about'
+});
+
+Router.route('/help', {
+	name: 'help'
+});
