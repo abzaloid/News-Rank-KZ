@@ -19,7 +19,7 @@ Template.suggest.events({
 		}
 
 		if (url.length > 7) {
-			if (url.substring(0, 7) !== "http://")
+			if (url.substring(0, 4) !== "http")
 				url = "http://" + url; 
 		} else {
 			url = "http://" + url;
