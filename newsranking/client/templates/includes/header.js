@@ -4,3 +4,9 @@ Template.header.events({
 		$('html, body').toggleClass('hide');		
 	}
 });
+
+Template.header.rendered = function () {
+	_.extend(Notifications.defaultOptions, {
+        timeout: 2500
+    });
+};

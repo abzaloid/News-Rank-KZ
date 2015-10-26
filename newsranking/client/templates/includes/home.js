@@ -5,19 +5,6 @@ Template.home.helpers({
 });
 
 Template.home.events({
-	'click #send-news': function () {
-		var l = $("#add-news").val();
-		console.log(l);
-		if (!l || l.length == 0) {
-			alert('Please insert correct input!');
-			return;
-		}
-		Links.insert({
-			votes: 1,
-			link: l,
-			added: new Date(),
-		});
-	},
 	'click .upvote': function (e) {
 		e.preventDefault();
 		var _id = $(e.currentTarget).attr('id');

@@ -13,6 +13,11 @@ Template.suggest.events({
 		var url = $("#url-send").val(),
 			title = $("#title-send").val();
 
+		if (!url || !title) {
+			Notifications.error('Заполните все поля!', 'Нужно ввести ссылку на статью и ее название');		    
+			return;
+		}
+
 		Links.insert({
 			link: url,
 			title: title,
@@ -21,7 +26,9 @@ Template.suggest.events({
 			added: new Date(),
 		});
 
-		window.location.replace('/');
+		Notifications.success('Спасибо!', 'Новая ссылка добавлена');		    
+
+		Router.go('home');
 
 	}
 });
