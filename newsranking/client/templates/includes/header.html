@@ -1,0 +1,48 @@
+<template name="header">
+		<div class="mobile-nav">
+			<a href="{{pathFor 'home'}}" class="mobile-logo">NEWS.KZ</a>
+			<span class="menu-btn"><span></span></span>
+		</div>
+
+		<div class="mobile-menu">
+			<a href="{{pathFor 'suggest'}}" class="suggest-article-btn--mobile">
+			<img src="/img/add.svg" alt="" class="suggest-icon">	
+				Предложить новость
+			</a>
+
+			<ul class="categories--mobile">
+				<li><a href="#" class="active">Последние</a></li>
+				<li><a href="#">Популярные</a></li>
+				<li><a href="#">Обсуждаемые</a></li>
+				<li><a href="#">Категория 4</a></li>
+			</ul>
+
+			<ul class="help-about--mobile">
+				<li><a href="#">Подписаться</a></li>
+				<li><a href="{{pathFor 'help'}}">Помощь</a></li>
+				<li><a href="{{pathFor 'about'}}">О сайте</a></li>
+			</ul>
+		</div>
+
+		<header class="navigation">
+			<div class="nav-wrapper">
+				<a href="{{pathFor 'home'}}" class="logo">NEWS-RANKING.KZ</a>
+				<a href="{{pathFor 'suggest'}}" class="suggest-article-btn"> 
+					<img src="/img/add.svg" alt="" class="suggest-icon">
+					Предложить новость
+				</a>
+				<ul class="categories">
+					<li><a href="{{pathFor 'home'}}" class="active">Последние</a></li>
+					<li><a href="{{pathFor 'home'}}">Популярные</a></li>
+					<li><a href="{{pathFor 'home'}}">Обсуждаемые</a></li>
+					<li><a href="{{pathFor 'home'}}">Категория 4</a></li>
+				</ul>
+
+				<ul class="help-about">
+					<li><a href="#" class="subscribe-menu-btn">Подписаться</a></li>
+					<li><a href="{{pathFor 'help'}}">Помощь</a></li>
+					<li><a href="{{pathFor 'about'}}">О сайте</a></li>
+				</ul>
+			</div>
+		</header>
+</template>
