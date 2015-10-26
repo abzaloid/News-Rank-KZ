@@ -23,3 +23,5 @@ iron:router
 accounts-password
 gfk:notifications
 underscore
+http
+webapp
