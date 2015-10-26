@@ -1,5 +1,7 @@
 <template name="layout">
-    <div class="container-fluid" id="main-container">
+	<div class="body-wrapper">
+		{{> header}}
         {{> yield}}
+        {{> side}}
     </div>
 </template>

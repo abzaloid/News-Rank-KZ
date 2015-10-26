@@ -1,20 +1,24 @@
 <template name="home">
-	<div class="container">
-		<h2 class="text-center">News Ranking Site</h2>
-		<div class="row">
-			<p class="lead"> Предложить новость </p>
-				<div class="col-md-9">
-					<input type="text" class="form-control" id="add-news"/> 
+	<section class="main-section main-section--flex">
+
+		{{#each links}}
+
+		<div class="article-container">
+			<div class="article-vote-box">
+				<img src="/img/arrow-up.svg" alt="" class="upvote" id="{{_id}}"><span class="rating">{{votes}}</span>
+			</div>
+			<div class="article-meta-box">
+				<a href="{{link}}" class="article-meta-box__name" target="_blank" id="title{{_id}}">{{title}}</a>
+				<span class="article-meta-box__views">{{views}}</span>
+				<div class="article-meta-box__share">
+					<a href="#" class="share-button"><img src="/img/icons/vk.svg" alt=""></a>
+					<a href="#" class="share-button"><img src="/img/icons/fb.svg" alt=""></a>
+					<a href="#" class="share-button"><img src="/img/icons/tw.svg" alt=""></a>
 				</div>
-				<div class="col-md-3">
-					<button type="button" id="send-news" class="btn btn-primary">Отправить</button>
-				</div>
+			</div>
 		</div>
-		<h3>Новости</h3>
-		<div class="row">
-			{{#each links}}
-				{{> link}}
-			{{/each}}
-		</div>
-	</div>
+
+		{{/each}}
+
+	</section>
 </template>
